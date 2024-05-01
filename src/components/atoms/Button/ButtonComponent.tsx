@@ -11,11 +11,11 @@ interface ButtonComponentProps {
 
 const ButtonComponent: React.FC<ButtonComponentProps> =({onPress, title, buttonContainerStyle, textStyle})=> {
 
-  const { btnContainerStyle, buttonTextStyle} = styles;
+  const {mainContainer, btnContainerStyle, buttonTextStyle} = styles;
 
   return (
     <TouchableOpacity activeOpacity={1} onPress={onPress} style={[ btnContainerStyle,buttonContainerStyle]}>
-      <Text style={[buttonTextStyle,textStyle]}> {title}</Text>
+      <Text style={[buttonTextStyle,textStyle]}>{title}</Text>
     </TouchableOpacity>
   )
 }
