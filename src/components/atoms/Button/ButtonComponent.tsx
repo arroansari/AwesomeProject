@@ -4,13 +4,14 @@ import React from 'react'
 interface ButtonComponentProps {
     onPress ?:()=> void,
     title: string,
-    buttonContainerStyle: any
+    buttonContainerStyle: any;
+    textStyle:any;
 }
 
-const ButtonComponent: React.FC<ButtonComponentProps> =({onPress, title, buttonContainerStyle})=> {
+const ButtonComponent: React.FC<ButtonComponentProps> =({onPress, title, buttonContainerStyle, textStyle})=> {
   return (
     <TouchableOpacity activeOpacity={1} onPress={onPress} style={buttonContainerStyle}>
-      <Text>{title}</Text>
+      <Text style={textStyle}>{title}</Text>
     </TouchableOpacity>
   )
 }
