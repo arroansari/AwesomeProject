@@ -1,11 +1,15 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const  ButtonComponent=()=> {
+interface ButtonComponentProps {
+    onPress ?:()=> void
+}
+
+const ButtonComponent: React.FC<ButtonComponentProps> =({onPress})=> {
   return (
-    <View>
+    <TouchableOpacity activeOpacity={1} onPress={onPress}>
       <Text>ButtonComponent</Text>
-    </View>
+    </TouchableOpacity>
   )
 }
 
