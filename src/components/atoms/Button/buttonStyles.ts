@@ -8,7 +8,9 @@ export const styles = StyleSheet.create({
         alignItems: 'center'
     },
     buttonTextStyle: {
-        fontSize:24
+        fontSize:24,
+        fontFamily: "hello",
+        
     }
 
 });
