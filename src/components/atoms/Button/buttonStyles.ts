@@ -7,6 +7,8 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
-    buttonTextStyle: {}
+    buttonTextStyle: {
+        fontSize:24
+    }
 
 });
