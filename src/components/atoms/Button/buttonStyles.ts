@@ -11,7 +11,8 @@ export const styles = StyleSheet.create({
         fontSize:24,
         fontFamily: "hello",
         fontWeight: 'bold',
-        color:'red'
+        color:'red',
+        textAlign: 'center'
     }
 
 });
