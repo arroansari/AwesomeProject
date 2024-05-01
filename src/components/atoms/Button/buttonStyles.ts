@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     buttonTextStyle: {
         fontSize:24,
         fontFamily: "hello",
-        
+        fontWeight: 'bold'
     }
 
 });
