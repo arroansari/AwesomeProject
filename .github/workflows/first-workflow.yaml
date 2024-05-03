@@ -1,0 +1,14 @@
+
+name: First WorkFlow
+on: push
+
+jobs:
+  run-shell-command:
+    runs-on: macos-latest
+    steps:
+      - name: echo a string
+      - run: echo "Hello beta ji"
+      - name: Multi line command
+        run: |
+          node -v
+          npm -v
