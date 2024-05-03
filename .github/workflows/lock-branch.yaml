@@ -1,17 +1,17 @@
 name: Lock Branch From Pushing
 on:
-    push:
-      branches:
-        - develop  
+  push:
+    branches:
+      - develop  
 
 jobs:
-    lock-branch:
-      runs-on: macos-latest
-      steps:
-        - name: Check if branch is develop
-          run: |
-            if ["$GITHUB_REF" == "refs/heads/develop"]; then
-              echo "Push to develop branch detected"
-              echo "Blocking push"   
-              exit 1
-            fi  
+  lock-branch:
+    runs-on: macos-latest
+    steps:
+      - name: Check if branch is develop
+        run: |
+          if ["$GITHUB_REF" == "refs/heads/develop"]; then
+            echo "Push to develop branch detected"
+            echo "Blocking push"   
+            exit 1
+          fi  
