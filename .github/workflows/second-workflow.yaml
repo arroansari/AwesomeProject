@@ -8,3 +8,12 @@ jobs:
     steps:
       - name: echo a string
         run: echo "Hello bunty"
+
+  testing-workflow-commands:
+    runs-on: macos-latest
+    needs: run-log
+    steps: 
+      - name: Setting an error message
+        run: echo "::error::Missing SemiColon"
+
+
