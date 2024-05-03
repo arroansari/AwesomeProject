@@ -1,0 +1,14 @@
+name: Lock Branch From Pushing
+on: push
+
+jobs:
+    lock-branch:
+      runs-on: macos-latest
+      steps:
+        - name: Check if branch is develop
+          run: |
+            if ["$GITHUB_REF" == "refs/heads/develop"]; then
+              echo "Push to feature/button branch detected"
+              echo "Blocking push"   
+              exit 1
+            fi  
