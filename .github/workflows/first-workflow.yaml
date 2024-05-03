@@ -7,7 +7,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: echo a string
-      - run: echo "Hello beta ji"
+        run: echo "Hello beta ji"
       - name: Multi line command
         run: |
           node -v
