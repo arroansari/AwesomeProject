@@ -11,4 +11,12 @@ jobs:
           ls -a
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
-          echo $GITHUB_WORKSPACE    
+          echo $GITHUB_WORKSPACE
+      - name: Python Shell
+        shell: python
+        run: |
+          import platform
+          print(platform.processor())
+          print("Hello World! I am Python language")
+          print(2+5)
+          print(2*5)
