@@ -1,0 +1,10 @@
+name: Second WorkFlow
+on: push
+
+
+jobs:
+  run-log:
+    runs-on: macos-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello bunty"
