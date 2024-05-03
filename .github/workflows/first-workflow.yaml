@@ -12,3 +12,8 @@ jobs:
         run: |
           node -v
           npm -v
+  parallel-job:
+    runs-on: macos-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello Arman how are you now?"       
