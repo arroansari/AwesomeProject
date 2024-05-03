@@ -1,0 +1,14 @@
+name : Working Directory & Shells
+on: push
+
+jobs:
+  display-wd-info:
+    runs-on: macos-latest
+    steps:
+      - name: Display working directories
+        run: |
+          pwd
+          ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE    
