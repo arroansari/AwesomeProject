@@ -18,7 +18,7 @@ jobs:
       - name: echo a string
         run: echo "Hello Arman how are you now?"
   dependent-job:
-    runs-on: macons-latest
+    runs-on: macos-latest
     needs: run-shell-command
     steps:
       - name: echo a string for dependent job
