@@ -1,0 +1,10 @@
+name: Repository Event
+on: [push, pull_request, issues]
+
+jobs:
+  check-Event:
+    runs-on: macos-latest
+    steps:
+        - name: checking events for pus
+          run: echo "Hello World"
+
