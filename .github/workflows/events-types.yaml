@@ -1,0 +1,16 @@
+name: Event Types Tracking
+on:
+    push:
+    pull_request:
+        types: [opened, assigned, reopened, closed]
+    issues:
+        types: [opened]    
+
+jobs:
+    Event-Types-Track:
+        runs-on: macos-latest
+        steps:
+           - run: |
+               echo $GITHUB_SHA
+               echo $GITHUB_REF
+
