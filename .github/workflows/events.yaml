@@ -5,6 +5,6 @@ jobs:
   check-Event:
     runs-on: macos-latest
     steps:
-        - name: checking events for pus
+        - name: checking events for push
           run: echo "Hello World"
 
