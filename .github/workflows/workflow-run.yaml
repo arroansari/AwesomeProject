@@ -1,0 +1,11 @@
+name: Workflow Run
+on:
+  workflow_run:
+    workflows: [Event Types Tracking]
+    types: [completed]
+
+jobs:
+    echo-string:
+      runs-on: macos-latest
+      steps:
+        - run: echo " I was triggered becasue 'Event Types Tracking' was completed "  
