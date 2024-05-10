@@ -34,8 +34,8 @@ function Section({children, title}: SectionProps): React.JSX.Element {
   console.log('🚀 ~ Section ~ isDarkMode:', isDarkMode);
 
   return (
-    <View style={styles.sectionContainer}>
-      <Text
+<View style={styles.sectionContainer}>
+<Text
         style={[
           styles.sectionTitle,
           {
