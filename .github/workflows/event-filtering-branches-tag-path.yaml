@@ -1,0 +1,24 @@
+name: Filtering Our Workflow By Branches and Tags
+on:
+  push:
+    branches:
+      - main
+      - "feature/*"
+      - "feature/**"
+
+    tags:
+      - v1.* #match v1.1 and v1.1.2
+      
+  pull_request:
+    types: [opened, closed, assigned, reopened]
+    branches:
+        - main #targeting main branch
+    paths:
+       - "**.tsx"
+       - "**.ts"
+
+jobs:
+  filter-event-by-branches-tags:
+      runs-on: macos-latest
+      steps:
+        - run:  
