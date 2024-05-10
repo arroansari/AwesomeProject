@@ -15,7 +15,13 @@
       "npx prettier --write"
     ]
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npx prettier --write"
+    ]
+  },
   "dependencies": {
+    "husky": "^9.0.11",
     "react": "18.2.0",
     "react-native": "0.74.0"
   },
