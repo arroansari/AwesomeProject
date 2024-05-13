@@ -1,0 +1,21 @@
+name: Status Check Function
+on: push
+
+jobs:
+    status-check-function:
+        runs-on: macos-latest
+        steps:
+          - name: setp 1
+            run: sleep 20
+          - name: run on failure
+            if: failure()
+            run: echo 'runs only on failiure'
+          - name: run on success
+            if: success()
+            run: echo 'runs only on success'
+    job-2:
+        runs-on: macos-latest
+        needs: status-check-function
+        if: failure()
+        steps:
+          - run: echo 'run only its failure'          
