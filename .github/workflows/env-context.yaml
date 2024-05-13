@@ -11,4 +11,4 @@ jobs:
     run-env-mac:
         runs-on: macos-latest
         steps:
-          - run: echo `Hi ${env.mascot} \n This is ${env.name} his age is ${env.age} live at ${env.address} you can reach to him by ${env.email}`  
+          - run: echo `Hi ${{env.mascot}} \n This is ${{env.name}} his age is ${{env.age}} live at ${{env.address}} you can reach to him by ${{env.email}}`  
