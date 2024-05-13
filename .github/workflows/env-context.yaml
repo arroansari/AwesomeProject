@@ -1,0 +1,14 @@
+name: Hi Mascot
+on: push
+env:
+    mascot: Mona
+    name: Ansari Arman
+    age: 19
+    address: samad nagar
+    email: armananso729@gmail.com
+
+jobs:
+    run-env-mac:
+        runs-on: macos-latest
+        steps:
+          - run: echo `Hi ${env.mascot} \n This is ${env.name} his age is ${env.age} live at ${env.address} you can reach to him by ${env.email}`  
