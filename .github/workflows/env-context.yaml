@@ -15,7 +15,7 @@ jobs:
 
     greeting-job:
         runs-on: macos-latest
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' # add the if condition to check condition if its not match will be skip the job
         env:
           Greeting: Hello
           day_of_week: monday
@@ -30,3 +30,9 @@ jobs:
              echo ${{false}}
              echo ${{5>10}}
              echo ${{null}}
+    say-hello:
+        runs-on: macos-latest
+        if: contains(fromJson('["pull_request"]'),github.event_name)
+        steps:
+          - name: Say hello
+            run: echo Arman  
