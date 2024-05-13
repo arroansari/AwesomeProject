@@ -1,5 +1,5 @@
 name: Hi Mascot
-on: push
+on: [push,pull_request]
 env:
     mascot: Mona
     name: Ansari Arman
@@ -30,8 +30,10 @@ jobs:
              echo ${{false}}
              echo ${{5>10}}
              echo ${{null}}
+
     say-hello:
         runs-on: macos-latest
+        #if condition can be write as below
         if: contains(fromJson('["pull_request"]'),github.event_name)
         steps:
           - name: Say hello
