@@ -15,7 +15,7 @@ jobs:
 
     greeting-job:
         runs-on: macos-latest
-        if: github.event_name == 'push'
+        if: github.event_name == 'pull_request'
         env:
           Greeting: Hello
           day_of_week: monday
