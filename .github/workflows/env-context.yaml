@@ -23,3 +23,9 @@ jobs:
           -  run: echo `${{env.first-name}}`
              env:
                 first-name: "Habibi"
+          - name: value expression
+            run: |
+             echo ${{true}}
+             echo ${{false}}
+             echo ${{5>10}}
+             echo ${{null}}
