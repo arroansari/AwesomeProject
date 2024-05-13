@@ -12,3 +12,14 @@ jobs:
         runs-on: macos-latest
         steps:
           - run: echo `Hi ${{env.mascot}} \n This is ${{env.name}} his age is ${{env.age}} live at ${{env.address}} you can reach to him by ${{env.email}}`  
+
+    greeting-job:
+        runs-on: macos-latest
+        env:
+          Greeting: Hello
+          day_of_week: monday
+        steps:
+          -  run: echo `${{env.Greeting}}`
+          -  run: echo `${{env.first-name}}`
+             env:
+                first-name: "Habibi"
