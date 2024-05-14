@@ -15,7 +15,7 @@ const ButtonComponent: React.FC<ButtonComponentProps> =({onPress, title, buttonC
 
   return (
     <TouchableOpacity activeOpacity={1} onPress={onPress} style={[ btnContainerStyle,buttonContainerStyle]}>
-      <Text style={[buttonTextStyle,textStyle]}>Hi {title}</Text>
+      <Text style={[buttonTextStyle,textStyle]}> {title}</Text>
     </TouchableOpacity>
   )
 }
