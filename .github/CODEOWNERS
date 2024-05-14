@@ -2,3 +2,4 @@
 *.js @arroansari
 *.ts @arroansari
 *.tsx @arroansari
+*.json @arroansari
