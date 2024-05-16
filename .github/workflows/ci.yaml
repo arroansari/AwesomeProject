@@ -1,0 +1,8 @@
+name: CI
+on:
+    pull_request:
+        branches: [main]
+
+jobs:
+    run-test:
+        uses: ./.github/workflows/test.yaml
