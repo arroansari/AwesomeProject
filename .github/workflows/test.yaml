@@ -21,4 +21,6 @@ jobs:
           - name: Check for ESLint error
             run: npm run lint
           - name: Check for Type error
-            run: npm run typecheck          
+            run: npm run typecheck
+          - name: Show name
+            run: echo "Arman Ansari"            
