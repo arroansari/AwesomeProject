@@ -1,5 +1,7 @@
 name: Test the application
-on: workflow_call
+on:
+    pull_request:
+        branches: [main]
 
 jobs:
     test-and-build:
