@@ -1,9 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
@@ -31,15 +26,20 @@ type SectionProps = PropsWithChildren<{
 
 function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
-     console.log('🚀 ~ Section ~ isDarkMode:', isDarkMode);
+         console.log('🚀 ~ Section ~ isDarkMode:', isDarkMode);
 
   return (
   <View style={styles.sectionContainer}>
-      <Text
+      
+    
+<Text
         style={[
           styles.sectionTitle,
           {
-            color: isDarkMode ? Colors.white : Colors.black,
+            color:
+              isDarkMode ? 
+              Colors.white : 
+              Colors.black,
           },
         ]}>
         {title}
@@ -49,7 +49,9 @@ function Section({children, title}: SectionProps): React.JSX.Element {
         style={[
           styles.sectionDescription,
           {
-            color: isDarkMode ? Colors.light : Colors.dark,
+            color:
+              isDarkMode ? 
+              Colors.light : Colors.dark,
           },
         ]}>
         {children}
