@@ -21,4 +21,5 @@ jobs:
   filter-event-by-branches-tags:
       runs-on: macos-latest
       steps:
-        - run:  
+        - name: Show name
+          run: echo "Arman"
