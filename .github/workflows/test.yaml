@@ -10,10 +10,10 @@ jobs:
         runs-on: macos-latest
         steps:
           - name: Check for formatting error
-            run: npm run check-prettier
+            run: npx prettier --check
           - name: Check for ESLint error
-            run: npm run lint
+            run: npx eslint .
           - name: Check for Type error
-            run: npm run typecheck
+            run: npx tsc
           - name: Show name
             run: echo "Arman Ansari"            
