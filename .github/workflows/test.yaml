@@ -9,8 +9,6 @@ jobs:
     test-and-build:
         runs-on: macos-latest
         steps:
-          - name: Install Dependencies
-            run: npm ci
           - name: Check for formatting error
             run: npm run check-prettier
           - name: Check for ESLint error
