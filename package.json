@@ -14,7 +14,8 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "npx prettier --check"
+      "npx prettier --check",
+      "npx prettier --write"
     ]
   },
   "dependencies": {
