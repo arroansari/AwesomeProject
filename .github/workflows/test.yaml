@@ -10,8 +10,10 @@ jobs:
         runs-on: macos-latest
         steps:
           - name: Check for formatting error
-            run: npx prettier --check
-          - name: Check for ESLint error
+            run: npx prettier --check "*.ts" "*.tsx"
+          - name: Install dependencies
+            run: npm install
+          - name: Run ESLint
             run: npx eslint .
           - name: Check for Type error
             run: npx tsc
