@@ -10,7 +10,7 @@ jobs:
         runs-on: macos-latest
         steps:
           - name: Check for formatting error
-            run: npx prettier --check
+            run: npx prettier --check "src/**/*.js" "src/**/*.jsx"
           - name: Check for ESLint error
             run: npx eslint .
           - name: Check for Type error
