@@ -9,15 +9,22 @@ jobs:
     test-and-build:
         runs-on: macos-latest
         steps:
-          # - name: Install dependencies
-          #   run: npm install
-          # - name: Check for formatting error
-          #   run: npx prettier --check "*.ts" "*.tsx"
-          # - name: Install dependencies
-          #   run: npm install
-          # - name: Run ESLint
-          #   run: npx eslint .
-          # - name: Check for Type error
-          #   run: npx tsc
+          - name: Checkout code
+            uses: actions/checkout@v3
+          - name: Setup Node Environment
+            uses: actions/setup-node@v3
+            with:
+              node-version: 18
+              cache: "npm"
+          - name: Install Dependency
+            run: npm ci
+          - name: Check for formatting error
+            run: npx prettier --check "*.ts" "*.tsx"
+          - name: Run ESLint
+            run: npx eslint .
+          - name: Check for Type error
+            run: npx tsc
+          - name: Check for formatting error
+            run: npx prettier . --check "*.ts" "*.tsx"
           - name: Show name
             run: echo "Arman Ansari"            
