@@ -19,7 +19,7 @@ jobs:
           - name: Install Dependency
             run: npm ci
           - name: Check for formatting error
-            run:  lint-staged
+            run:  npx lint-staged
           - name: Check for Type error
             run: npx tsc
           - name: Run ESLint
