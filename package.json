@@ -17,11 +17,6 @@
       "npx prettier --write"
     ]
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "npx prettier --write"
-    ]
-  },
   "dependencies": {
     "react": "18.2.0",
     "react-native": "0.74.0"
